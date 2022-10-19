@@ -19,19 +19,19 @@ int main()
 	else if(choice == 2)
 	{
 		ans = a-b;
-                printf("%d - %d = %d", a, b, ans);
+        printf("%d - %d = %d", a, b, ans);
 
 	}
 	else if(choice == 3)
 	{
 		ans = a*b;
-                printf("%d * %d = %d", a, b, ans);
+        printf("%d * %d = %d", a, b, ans);
 
 	}
 	else if(choice == 4)
 	{
 		ans = a/b;
-                printf("%d / %d = %d", a, b, ans);
+        printf("%d / %d = %d", a, b, ans);
 
 	}
 	else

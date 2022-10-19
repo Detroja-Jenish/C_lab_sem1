@@ -11,7 +11,8 @@ int main()
 	week = (N_Days - (365*year))/7;
 	day = (N_Days - (365*year))%7;
 
-	printf("the %d  N_Days is equals to %d years %d weeks %d", N_Days, year, week, day);
+	printf("the %d  N_Days is equals to %d years %d weeks %d 
+days.", N_Days, year, week, day);
 
 	return 0;
-} 	
+} 		
