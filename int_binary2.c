@@ -3,6 +3,7 @@
 int main()
 {
     int n, binary = 0, power = 1, dummy = 0;
+    printf("Enter a number... : ");
     scanf("%d", &n);
     
     while(1)
