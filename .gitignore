@@ -1,5 +1,4 @@
 *.vscode
 a.out
 *.DS_Store
-
-
+.gitignore
