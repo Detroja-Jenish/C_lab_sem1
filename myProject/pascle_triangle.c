@@ -11,10 +11,17 @@ int main()
 
 	for(i=0; i<n; i++)
 	{
-		for(j=0; j<=i; j++)
+		for(j=n; j>=0; j--)
 		{
-			pascle_value = factorial(i)/(factorial(j)*factorial(i-j));
-			printf("%d ", pascle_value);
+			if(j<=i)
+			{
+					pascle_value = factorial(i)/(factorial(j)*factorial(i-j));
+					printf("%d ", pascle_value);
+			}
+			else
+			{
+					printf(" ");
+			}
 		}
 		printf("\n");
 	}
