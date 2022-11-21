@@ -1,14 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int i, j, count = 1;
+	int i, j, count = 1, n;
+	printf("Enter a number  : ");
+	scanf("%d", &n);
 
-	for(i=1; i<=5; i++)
+	for (i = 1; i <= n; i++)
 	{
-		for(j=1; j<=i; j++, count++)
+		for (j = 1; j <= i; j++, count = !count)
 		{
-			printf("%d ", count%2);
+			printf("%d ", count);
 		}
 		printf("\n");
 	}
