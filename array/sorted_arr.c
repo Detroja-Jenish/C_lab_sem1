@@ -7,33 +7,36 @@ int main()
     printf("Enter a number ");
     scanf("%d", &n);
 
-    int num[3];
+    int num[n];
 
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < n; i++)
     {
         printf("Enter a number  : ");
         scanf("%d", &num[i]);
     }
-    for (i = 0; i < 3; i++)
+    
+    printf("\n\n\noriginal array :  ");
+
+    for (i = 0; i < n; i++)
     {
         printf("%d  ", num[i]);
     }
 
-    for (i = 0; i < n; n--)
+    for (i = n; i > 0; i--)
     {
-        for (j = 0; j < n - 1; j++)
+        for (j = 0; j < i - 1; j++)
         {
             if (num[i] > num[i + 1])
             {
-                temp = num[i];
-                num[i] = num[i + 1];
-                num[i + 1] = temp;
+                temp = num[j];
+                num[j] = num[j + 1];
+                num[j + 1] = temp;
             }
         }
     }
     printf("\n\n\nsorted array :  ");
 
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < n; i++)
     {
         printf("%d  ", num[i]);
     }
