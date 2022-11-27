@@ -26,7 +26,7 @@ int main()
     {
         for (j = 0; j < i - 1; j++)
         {
-            if (num[i] > num[i + 1])
+            if (num[j] > num[j + 1])
             {
                 temp = num[j];
                 num[j] = num[j + 1];
