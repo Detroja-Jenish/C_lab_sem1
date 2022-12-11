@@ -162,10 +162,13 @@ void printWord(int n, int p)
 		printf("Lac ");
 		break;
 	  case 5:
-		printf("Corore ");
+		printf("Crore ");
+		break;
+		case 6:
+		printf("Arab ");
+		break;
 	}
   }
   p = p + 1;
 
 }
-
