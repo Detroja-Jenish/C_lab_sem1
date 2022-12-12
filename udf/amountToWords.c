@@ -20,6 +20,11 @@ int convertAmtToWord(int n, int *p)
   {
 	return 0;
   }
+	if(n<0)
+	{
+		printf("negative ");
+		n = -1*n;
+	}
   int count = *p;
   int d;
   if(count == 2)
@@ -162,13 +167,10 @@ void printWord(int n, int p)
 		printf("Lac ");
 		break;
 	  case 5:
-		printf("Crore ");
-		break;
-		case 6:
-		printf("Arab ");
-		break;
+		printf("Corore ");
 	}
   }
   p = p + 1;
 
 }
+

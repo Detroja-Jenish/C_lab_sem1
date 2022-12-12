@@ -9,7 +9,7 @@ int main()
 
   for(i=0; i<n; i++)
   {
-	printf("%d ", fibbo(i));
+		printf("%d ", fibbo(i));
   }
   printf("\n\n");
   return 0;
