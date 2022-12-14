@@ -2,11 +2,10 @@
 
 
 int main(){
-	int n=3;
+	int n, i, j, count, move;
+	printf("Enter a number : ");
+	scanf("%d", &n);
 	int a[n][n];
-	int move=1;
-	int count = 1;
-	int i=0, j=0;
 	for(i=0; i<n; i++)
 	{
 		for(j=0; j<n; j++)
@@ -14,65 +13,50 @@ int main(){
 			a[i][j] = 0;
 		}
 	}
-	i=0;
-	j=0;
-	while(a[i][j]==0)
+	for(i=0, j=0, count=1, move = 1; count <= n*n; count++)
 	{
-		if(i<0 || j<0 || i==n || j==n || a[i][j] != 0)
-		{
-			move++;
-			if(move > 4)
-			{
-				move =1;
-			}
-		}
+		a[i][j] =count;
 		switch(move)
 		{
 			case 1:
-				a[i][j] = count;
 				j++;
-				if(j==n){
-					j--;
-					i++;
+				if(j==n-1 || a[i][j+1] != 0){
+					move = 2;
 				}
 				break;
+
 			case 2:
-				a[i][j] = count;
 				i++;
-				if(i==n){
-					i--;
-					j--;
+				if(i==n-1 || a[i+1][j] != 0)
+				{
+					move = 3;
 				}
 				break;
+
 			case 3:
-				a[i][j] = count;
 				j--;
-				if(j<0){
-					j++;
-					i--;
+				if(j==0 || a[i][j-1] != 0)
+				{
+					move = 4;
 				}
 				break;
 			case 4:
-				a[i][j] = count;
 				i--;
-				if(i<0){
-					i++;
-					j++;
+				if(i==0 || a[i-1][j] != 0)
+				{
+					move = 1;
 				}
 				break;
+		
 		}
-		count++;
 	}
-
 	for(i=0; i<n; i++)
 	{
-		for(j=0;j<n; j++)
+		for(j=0; j<n; j++)
 		{
-			printf("%d ", a[i][j]);
+			printf("%2d ",a[i][j] );
 		}
 		printf("\n");
 	}
-	return 0;
 }
-
 

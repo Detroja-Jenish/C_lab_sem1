@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void init_board(char board[3][3]);
+void init_board(char board[3][3], int n);
 
 int player_input();
 
@@ -12,8 +12,10 @@ int main()
 {
     char player_1[] = "jenish", player_2[] = "viral", players_sign[] = {'O', 'X'};
     char board[3][3];
+		int jenish=0;
     int game_status = 0, player_turn = 1, n;
-    init_board(board);
+    init_board(board, jenish);
+		printf("%d", jenish);
     while (game_status < 9)
     {
 				n = player_input();
@@ -25,7 +27,7 @@ int main()
     return 0;
 }
 
-void init_board(char board[3][3])
+void init_board(char board[3][3], int n)
 {
     int i, j;
     for (i = 0; i < 3; i++)
@@ -35,6 +37,8 @@ void init_board(char board[3][3])
             board[i][j] = '-';
         }
     }
+		n =1;
+
 }
 
 int player_input()
